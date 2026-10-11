@@ -1,0 +1,21 @@
+{
+  "platform": "linux",
+  "passed": true,
+  "seconds": 0.76,
+  "checks": [
+    {
+      "path": "/api/health",
+      "authorized": true
+    },
+    {
+      "path": "/api/health",
+      "authorized": true
+    },
+    {
+      "path": "/api/health",
+      "authorized": true
+    }
+  ],
+  "scope": "Actual watchdog HTTP polling and termination of an owned disposable child; fixture reports failed worker, not a real production crash",
+  "production_interval_seconds": 20
+}

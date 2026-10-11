@@ -1,0 +1,45 @@
+{
+  "version": "0.5.0",
+  "platform": "linux",
+  "fresh_venv": true,
+  "editable_install": true,
+  "wheel_build": true,
+  "installed_import": true,
+  "elapsed_seconds": 36.827,
+  "scope": "Actual clean Linux source installation and build; not bundled Windows Python/native DLL execution",
+  "checks": [
+    {
+      "command": [
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "-e",
+        "/workspace/scratch/4d3beea8402b/NEXUS"
+      ],
+      "returncode": 0,
+      "output": "Obtaining file:///workspace/scratch/4d3beea8402b/NEXUS\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Getting requirements to build editable: started\n  Getting requirements to build editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: nexus-personal-agent\n  Building editable for nexus-personal-agent (pyproject.toml): started\n  Building editable for nexus-personal-agent (pyproject.toml): finished with status 'done'\n  Created wheel for nexus-personal-agent: filename=nexus_personal_agent-0.5.0-0.editable-py3-none-any.whl size=4457 sha256=084cac128190c116151885517f9fabc0e1a92890c756112e0c29a06eab9dcd5b\n  Stored in directory: /tmp/pip-ephem-wheel-cache-rerxw7vz/wheels/85/1d/b3/448385e7c83478219639cf849e6f8cf2923c28f438925ccd83\nSuccessfully built nexus-personal-agent\nInstalling collected packages: nexus-personal-agent\nSuccessfully installed nexus-personal-agent-0.5.0\n"
+    },
+    {
+      "command": [
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--wheel-dir",
+        "/workspace/scratch/4d3beea8402b/qa/packaging-output",
+        "/workspace/scratch/4d3beea8402b/NEXUS"
+      ],
+      "returncode": 0,
+      "output": "Processing ./NEXUS\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Getting requirements to build wheel: started\n  Getting requirements to build wheel: finished with status 'done'\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: nexus-personal-agent\n  Building wheel for nexus-personal-agent (pyproject.toml): started\n  Building wheel for nexus-personal-agent (pyproject.toml): finished with status 'done'\n  Created wheel for nexus-personal-agent: filename=nexus_personal_agent-0.5.0-py3-none-any.whl size=419368 sha256=45284a92668b47e7c53d20eb23e1d30a5149625561d55fa58a57892d4fef68d5\n  Stored in directory: /tmp/pip-ephem-wheel-cache-rhu8w8jz/wheels/85/1d/b3/448385e7c83478219639cf849e6f8cf2923c28f438925ccd83\nSuccessfully built nexus-personal-agent\n"
+    },
+    {
+      "command": [
+        "-c",
+        "import nexus; from nexus.server import Application; from nexus.voice_check import save_check; from nexus.calculator import calculate; print(nexus.__version__, calculate(\"12*13\")[\"value\"])"
+      ],
+      "returncode": 0,
+      "output": "0.5.0 156\n"
+    }
+  ]
+}

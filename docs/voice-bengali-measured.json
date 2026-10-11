@@ -1,0 +1,56 @@
+{
+  "platform": "linux",
+  "scope": "Actual Bengali Piper model and local Whisper; generated speech is not a human microphone recording. No subjective naturalness score.",
+  "text": "বস, কী হয়েছে? বলো, শুনছি।",
+  "voices": [
+    {
+      "synthesized": true,
+      "audio": "8775f13912a849968d86f0f8da18acbb.wav",
+      "duration_seconds": 3.19,
+      "sample_rate": 22050,
+      "local": true,
+      "language": "bn",
+      "engine": "Piper Bengali Google medium",
+      "audible_verified": false,
+      "speaker": 0,
+      "synthesis_seconds": 0.865,
+      "rms": 0.099,
+      "independent_whisper": {
+        "text": "बश, कि हुए तश, बड़ो शुन्ची",
+        "language": "bn",
+        "local": true,
+        "note": "Review the transcript before submitting it."
+      },
+      "transcription_seconds": 2.14
+    },
+    {
+      "synthesized": true,
+      "audio": "1472d43fece84a89a9df412cfca2ebc4.wav",
+      "duration_seconds": 4.64,
+      "sample_rate": 22050,
+      "local": true,
+      "language": "bn",
+      "engine": "Piper Bengali Google medium",
+      "audible_verified": false,
+      "speaker": 15,
+      "synthesis_seconds": 0.978,
+      "rms": 0.1551,
+      "independent_whisper": {
+        "text": "बाश की होई चे? बालो शुन्ची",
+        "language": "bn",
+        "local": true,
+        "note": "Review the transcript before submitting it."
+      },
+      "transcription_seconds": 1.587
+    }
+  ],
+  "windows_devices_tested": false,
+  "cache": {
+    "same_audio": true,
+    "cached": true,
+    "seconds": 0.0003
+  },
+  "waveform_passed": true,
+  "phrase_accuracy_passed": false,
+  "note": "Audio generation passed; the independent transcript did not match. No human-likeness certification."
+}

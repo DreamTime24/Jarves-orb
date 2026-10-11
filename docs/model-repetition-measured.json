@@ -1,0 +1,320 @@
+{
+  "platform": "linux",
+  "model": "Qwen/Qwen3-4B-GGUF Q4_K_M",
+  "weight_bytes": 2497280256,
+  "runtime": "llama.cpp CPU via local HTTP transport test harness",
+  "ollama_windows_tested": false,
+  "tests": [
+    {
+      "case": "real_model_repository_repair",
+      "workflow_state": "PAUSED",
+      "elapsed_seconds": 196.981,
+      "test_suite_passed": true,
+      "test_output": "test_negative (test_calc.Tests.test_negative) ... ok\ntest_positive (test_calc.Tests.test_positive) ... ok\ntest_zero (test_calc.Tests.test_zero) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "file_content": "def add(a, b):\n    return a + b",
+      "approved_actions": [
+        {
+          "tool": "files.write",
+          "arguments": {
+            "path": "repair/calc.py",
+            "content": "def add(a, b):\n    return a + b",
+            "expected_sha256": "e1a894022d1a082987b87adecb623438c9e386d86b2b621cff4a5fe7fdf7edc8"
+          }
+        },
+        {
+          "tool": "project.check",
+          "arguments": {
+            "path": "repair",
+            "check": "python_tests"
+          }
+        },
+        {
+          "tool": "files.write",
+          "arguments": {
+            "path": "repair/calc.py",
+            "content": "def add(a, b):\n    return a + b",
+            "expected_sha256": "8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa"
+          }
+        },
+        {
+          "tool": "project.check",
+          "arguments": {
+            "path": "repair",
+            "check": "python_tests"
+          }
+        },
+        {
+          "tool": "files.write",
+          "arguments": {
+            "path": "repair/calc.py",
+            "content": "def add(a, b):\n    return a + b",
+            "expected_sha256": "8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa"
+          }
+        },
+        {
+          "tool": "project.check",
+          "arguments": {
+            "path": "repair",
+            "check": "python_tests"
+          }
+        }
+      ],
+      "task": {
+        "id": "0f306b7afb7e495da4d4de77ab97def7",
+        "title": "Fix repair/calc.py so add(a,b) correctly adds numbers. Read repair/calc.py and repair/test_calc.py, ",
+        "goal": "Fix repair/calc.py so add(a,b) correctly adds numbers. Read repair/calc.py and repair/test_calc.py, change only calc.py, then run the python_tests check in repair. Do not change tests. Stop after observed passing tests.",
+        "state": "PAUSED",
+        "created_at": "2026-10-05T14:45:03.539161+00:00",
+        "updated_at": "2026-10-05T14:48:20.468037+00:00",
+        "due_at": null,
+        "result": "The `add` function in `repair/calc.py` was fixed to correctly add numbers. The original implementation was incorrect, as it subtracted the second argument from the first (`return a - b`). The fix changed it to correctly add the two arguments (`return a + b`).\n\nAfter the fix, the `python_tests` check was run, and all three test cases in `repair/test_calc.py` passed successfully:\n1. `test_positive` - `add(3, 4)` returns 7\n2. `test_negative` - `add(-2, 5)` returns 3\n3. `test_zero` - `add(9, 0)` returns 9\n\nThe tests confirmed that the `add` function now works as expected. However, it's important to note that the test coverage is limited, and additional tests may be needed for full validation.",
+        "error": "Planning budget reached. Completed steps are retained. Review results and create a follow-up task if needed.",
+        "priority": 2,
+        "plan_rounds": 3,
+        "mode": "agent",
+        "steps": [
+          {
+            "id": "4d0c3b26dff94a4ea8092c1b35e17a43",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 0,
+            "title": "Read repair/calc.py",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"def add(a, b):\\n    return a - b\\n\", \"sha256\": \"e1a894022d1a082987b87adecb623438c9e386d86b2b621cff4a5fe7fdf7edc8\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "f1f1ec9ec44f4739b71e1658dc9e1df8",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 1,
+            "title": "Read repair/test_calc.py",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/test_calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"import unittest\\nfrom calc import add\\nclass Tests(unittest.TestCase):\\n def test_positive(self):self.assertEqual(add(3, 4), 7)\\n def test_negative(self):self.assertEqual(add(-2, 5), 3)\\n def test_zero(self):self.assertEqual(add(9, 0), 9)\\n\", \"sha256\": \"aae51fdbe4582c85133acd6731fec33333e5f7a57c4e57c78d0a8c5ffc378251\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "f6c5f98579f44da8a1f1e3d4b395b070",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 2,
+            "title": "Edit repair/calc.py to fix the add function",
+            "tool": "files.write",
+            "arguments": {
+              "path": "repair/calc.py",
+              "content": "def add(a, b):\n    return a + b",
+              "expected_sha256": "e1a894022d1a082987b87adecb623438c9e386d86b2b621cff4a5fe7fdf7edc8"
+            },
+            "state": "COMPLETED",
+            "result": "{\"path\": \"repair/calc.py\", \"sha256\": \"8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa\", \"verified\": true, \"note\": \"File bytes verified. Correctness still requires tests.\"}",
+            "error": ""
+          },
+          {
+            "id": "bd5bf1b35f3147d887b63a7720ac462d",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 3,
+            "title": "Run python_tests check in repair",
+            "tool": "project.check",
+            "arguments": {
+              "path": "repair",
+              "check": "python_tests"
+            },
+            "state": "COMPLETED",
+            "result": "{\"exit_code\": 0, \"output\": \"test_negative (test_calc.Tests.test_negative) ... ok\\ntest_positive (test_calc.Tests.test_positive) ... ok\\ntest_zero (test_calc.Tests.test_zero) ... ok\\n\\n----------------------------------------------------------------------\\nRan 3 tests in 0.000s\\n\\nOK\\n\", \"limited\": false, \"verified\": true, \"note\": \"A successful exit is not proof of adequate test coverage.\"}",
+            "error": ""
+          },
+          {
+            "id": "ea2e13a2c95e49788ff22b4e9e1b6bbc",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 4,
+            "title": "Read existing files",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"def add(a, b):\\n    return a + b\", \"sha256\": \"8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "9c715e79baa4452d8cb12d0bc946d7ee",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 5,
+            "title": "Read test file",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/test_calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"import unittest\\nfrom calc import add\\nclass Tests(unittest.TestCase):\\n def test_positive(self):self.assertEqual(add(3, 4), 7)\\n def test_negative(self):self.assertEqual(add(-2, 5), 3)\\n def test_zero(self):self.assertEqual(add(9, 0), 9)\\n\", \"sha256\": \"aae51fdbe4582c85133acd6731fec33333e5f7a57c4e57c78d0a8c5ffc378251\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "bcdc91b6199b4225935ebec963f65599",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 6,
+            "title": "Modify calc.py to fix addition",
+            "tool": "files.write",
+            "arguments": {
+              "path": "repair/calc.py",
+              "content": "def add(a, b):\n    return a + b",
+              "expected_sha256": "8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa"
+            },
+            "state": "COMPLETED",
+            "result": "{\"path\": \"repair/calc.py\", \"sha256\": \"8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa\", \"verified\": true, \"note\": \"File bytes verified. Correctness still requires tests.\"}",
+            "error": ""
+          },
+          {
+            "id": "e1557462bdc342c6bf187272c24250bf",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 7,
+            "title": "Run python tests",
+            "tool": "project.check",
+            "arguments": {
+              "path": "repair",
+              "check": "python_tests"
+            },
+            "state": "COMPLETED",
+            "result": "{\"exit_code\": 0, \"output\": \"test_negative (test_calc.Tests.test_negative) ... ok\\ntest_positive (test_calc.Tests.test_positive) ... ok\\ntest_zero (test_calc.Tests.test_zero) ... ok\\n\\n----------------------------------------------------------------------\\nRan 3 tests in 0.000s\\n\\nOK\\n\", \"limited\": false, \"verified\": true, \"note\": \"A successful exit is not proof of adequate test coverage.\"}",
+            "error": ""
+          },
+          {
+            "id": "c7a85332b17b41c0b77b48ddf7b1948d",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 8,
+            "title": "Inspect existing files",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"def add(a, b):\\n    return a + b\", \"sha256\": \"8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "ebeade9bd6bf48dda6196770b587201a",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 9,
+            "title": "Inspect existing files",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/test_calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"import unittest\\nfrom calc import add\\nclass Tests(unittest.TestCase):\\n def test_positive(self):self.assertEqual(add(3, 4), 7)\\n def test_negative(self):self.assertEqual(add(-2, 5), 3)\\n def test_zero(self):self.assertEqual(add(9, 0), 9)\\n\", \"sha256\": \"aae51fdbe4582c85133acd6731fec33333e5f7a57c4e57c78d0a8c5ffc378251\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "c32806b609964f0095e328b4d6cef0c6",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 10,
+            "title": "Modify calc.py to correctly add numbers",
+            "tool": "files.write",
+            "arguments": {
+              "path": "repair/calc.py",
+              "content": "def add(a, b):\n    return a + b",
+              "expected_sha256": "8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa"
+            },
+            "state": "COMPLETED",
+            "result": "{\"path\": \"repair/calc.py\", \"sha256\": \"8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa\", \"verified\": true, \"note\": \"File bytes verified. Correctness still requires tests.\"}",
+            "error": ""
+          },
+          {
+            "id": "2466ba746f2249b3addf84db9419f78b",
+            "task_id": "0f306b7afb7e495da4d4de77ab97def7",
+            "position": 11,
+            "title": "Run python_tests check in repair",
+            "tool": "project.check",
+            "arguments": {
+              "path": "repair",
+              "check": "python_tests"
+            },
+            "state": "COMPLETED",
+            "result": "{\"exit_code\": 0, \"output\": \"test_negative (test_calc.Tests.test_negative) ... ok\\ntest_positive (test_calc.Tests.test_positive) ... ok\\ntest_zero (test_calc.Tests.test_zero) ... ok\\n\\n----------------------------------------------------------------------\\nRan 3 tests in 0.000s\\n\\nOK\\n\", \"limited\": false, \"verified\": true, \"note\": \"A successful exit is not proof of adequate test coverage.\"}",
+            "error": ""
+          }
+        ]
+      }
+    }
+  ],
+  "study_results_preserved_in": "model-context-failure-measured.json",
+  "smoke": {
+    "model": "qwen3-4b-test",
+    "platform": "Linux",
+    "passed": true,
+    "cases": [
+      {
+        "case": "json",
+        "passed": true,
+        "seconds": 1.976,
+        "output": {
+          "answer": "ready",
+          "steps": []
+        }
+      },
+      {
+        "case": "arithmetic",
+        "passed": true,
+        "seconds": 1.964,
+        "output": {
+          "answer": "156",
+          "steps": []
+        }
+      },
+      {
+        "case": "bengali",
+        "passed": true,
+        "seconds": 2.969,
+        "output": {
+          "answer": "প্রস্তুত",
+          "steps": []
+        }
+      }
+    ],
+    "scope": "Three basic smoke cases; not an advanced coding, factual accuracy or AGI benchmark."
+  },
+  "model_runs": [
+    {
+      "id": 1,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 42.28680215400004,
+      "success": 1,
+      "prompt_tokens": 1061,
+      "output_tokens": 171,
+      "created_at": "2026-10-05T14:45:45.829310+00:00"
+    },
+    {
+      "id": 2,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 50.037332139,
+      "success": 1,
+      "prompt_tokens": 1712,
+      "output_tokens": 235,
+      "created_at": "2026-10-05T14:46:35.964292+00:00"
+    },
+    {
+      "id": 3,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 52.16593132699995,
+      "success": 1,
+      "prompt_tokens": 2365,
+      "output_tokens": 247,
+      "created_at": "2026-10-05T14:47:28.242328+00:00"
+    },
+    {
+      "id": 4,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 52.09913506699991,
+      "success": 1,
+      "prompt_tokens": 1687,
+      "output_tokens": 181,
+      "created_at": "2026-10-05T14:48:20.466343+00:00"
+    }
+  ],
+  "review": "The repaired implementation passed its independent three tests, but the model repeatedly proposed the same completed edit/test and consumed all three planning rounds. The workflow paused at the budget. This baseline is retained; revised-plan duplicate suppression was subsequently added."
+}

@@ -1,1 +1,15 @@
-# Jarves-orb
+# NEXUS 0.5 — compact Jarvis-style voice assistant
+
+ZIP-এর **সব ফাইল Extract** করে **NEXUS.exe** ডাবল-ক্লিক করো। Windows x64-এ ছোট 320×380 orb খুলবে। Python 3.13.16, 29টি pinned dependency, source, UI, launcher ও tests প্যাকেজে আছে; প্রতি launch-এ dependencies reinstall হবে না। প্রথমবার Internet ও user-data drive-এ অন্তত **20 GB free space** রাখো: official engine, Gemma3 4B, Whisper small/large-v3 এবং Piper voices background-এ নামবে। API key লাগে না। Windows native DLL repair প্রয়োজন হলে signed Microsoft runtime-এর permission prompt আসতে পারে। Missing service হলে সত্যিকারের error ও retry থাকবে।
+
+**Mic** চাপো ও microphone Allow করো। Settings → **Apply Jarvis preset**: সংক্ষিপ্ত কথোপকথন, English Ryan male voice, স্বাভাবিক গতি ও 0.8 s pause। বাংলা voice-এ 16 speaker choice; Continuous / Push-to-talk, language, speed, mute, text fallback ও transcript আছে। Space = Mic; Esc / Stop = reply থামাও। নিজের reply চলাকালে mic বন্ধ; spoken “থামো” listening অবস্থায় কাজ করে। Ryan voice ব্যক্তিগত noncommercial ব্যবহারের জন্য; অন্য প্রয়োজনে voice/model terms দেখো।
+
+“এখন কয়টা বাজে”, “YouTube খোলো”, “calculator kholo”, “বারো গুণ তেরো কত” চেষ্টা করো। App opening-এ exact confirmation লাগবে। সাধারণ অঙ্কে bounded calculator সঠিক ফল দেয়; একই session-এ “ওই ফলকে বারো দিয়ে ভাগ করলে কত হবে” বুঝবে। Delete/message/system-change voice commands চালু নেই। অন্য প্রশ্নে actual model ব্যবহার হয়; কোনো placeholder AI reply নেই। স্থানীয় ছোট model ভুল করতে পারে, বিশেষত Banglish ও জটিল অঙ্কে।
+
+**NEXUS-Web.cmd** local web orb খোলে। **Create-Desktop-Shortcuts.cmd** desktop shortcuts বানায়। Settings → Full workspace-এ task/code/memory interface আছে। **Retry-Setup.cmd**, **Open-Diagnostics.cmd** এবং **Stop-NEXUS.cmd** যথাক্রমে setup, detailed logs ও shutdown-এর জন্য। Browser tab বন্ধ হলে backend চলতে পারে; Stop-NEXUS ব্যবহার করো। Data থাকে %LOCALAPPDATA%\NEXUS-এ; ZIP-এর ভেতর user data নেই।
+
+Settings → **Test my microphone & speaker** তোমার actual speech jobs ও নিজের transcript/audibility observations রেকর্ড করে। **Test-Native-Windows.cmd** portable executable/window/duplicate/close/reopen যাচাই করে; **Test-Windows.cmd** automated plus মানব-পর্যবেক্ষণ acceptance। **Test-Reliability.cmd** ২৪ ঘণ্টার disposable backend-only runner; **Test-Voice-24h.cmd** চলমান assistant-এর actual ASR/model/neural WAV runner, PC awake ও app open থাকতে হবে। এটি microphone বা audible speaker পরীক্ষা করে না। অসম্পূর্ণ run কখনো full-day pass পায় না।
+
+Linux source install/wheel, 97 Python tests, 15 orb UI checks, 11 dashboard checks, launcher close/reopen, actual recorded English speech → model → neural WAV এবং short endurance পরীক্ষা করা হয়েছে। Bengali study question/follow-up-এর actual উত্তর আছে, তবে Bengali human-audio accuracy threshold pass করেনি; Banglish quality স্থির নয়। **Windows executable/native DLL, actual microphone/speaker এবং পূর্ণ ২৪ ঘণ্টা এখানে verified নয়।** UI voice tests-এ simulated devices ছিল। বিস্তারিত ফল ও ব্যর্থতা: **docs/TEST_REPORT.md**। CPU configuration i5-13400 / 16 GB-এর জন্য bounded; target-PC latency/RAM আলাদাভাবে পরীক্ষা করা দরকার।
+
+বাংলা ব্যবহারবিধি: **START-HERE.html**। Source development: **docs/DEVELOPMENT.md**। Third-party/model licenses: **docs/THIRD_PARTY.md**। Commercial game-control adapter বা AGI এখানে নেই।

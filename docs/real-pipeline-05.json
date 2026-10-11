@@ -1,0 +1,246 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "model": "Gemma3-4B Q4_K_M, official Ollama layer",
+  "bengali_asr": "Systran/faster-whisper-large-v3 / CPU int8",
+  "asr_max_new_tokens": 400,
+  "cpu_only": true,
+  "runtime": "Official llama.cpp b11429, real local HTTP provider",
+  "scope": "Prerecorded human English JFK and first three bounded FLEURS Bengali dev clips; synthetic neural question -> actual ASR -> actual model -> neural WAV; text follow-ups and clock. No provider/audio stubs. No physical mic/speaker, Windows executable or 24h acceptance.",
+  "windows_native_verified": false,
+  "physical_devices_verified": false,
+  "24_hour_pass": false,
+  "cases": [
+    {
+      "case": "human_english_ASR",
+      "expected": "And so my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+      "result": {
+        "text": "And so my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+        "language": "en",
+        "local": true,
+        "needs_review": false,
+        "seconds": 2.323,
+        "recorded_seconds": 11.0,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "word_error_rate": 0.0,
+      "passed": true,
+      "source": "https://github.com/SYSTRAN/faster-whisper/blob/master/tests/data/jfk.flac"
+    },
+    {
+      "case": "synthetic_question_full_real_pipeline",
+      "input_kind": "Piper input, not physical microphone",
+      "asr": {
+        "text": "What is the capital of France?",
+        "language": "en",
+        "local": true,
+        "needs_review": false,
+        "seconds": 1.113,
+        "recorded_seconds": 1.66,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "answer": "The capital of France is Paris, boss. It’s a beautiful city with a rich history. Would you like me to tell you a little about it?",
+      "speech": {
+        "synthesized": true,
+        "audio": "a32382ec2bf140afa32bc6d6ae143a4f.wav",
+        "duration_seconds": 6.21,
+        "sample_rate": 22050,
+        "seconds": 1.293,
+        "text_sha256": "d7d28dbfebaf0648a7c0049592cdc888ccbb18ee3e36234fcfb66ba6c95b9ec9",
+        "local": true,
+        "language": "en",
+        "engine": "Piper en_US-ryan-medium",
+        "audible_verified": false
+      },
+      "seconds_after_asr": 7.048,
+      "passed": true,
+      "engine": "real_model"
+    },
+    {
+      "case": "real_model_english_followup",
+      "answer": "The Seine River flows through Paris. It’s a major waterway for the city.",
+      "passed": true
+    },
+    {
+      "case": "bengali_or_banglish_answer",
+      "input": "বারো গুণ তেরো কত? এক বাক্যে উত্তর দাও।",
+      "answer": "হিসাব করে পেলাম 156.",
+      "passed": true,
+      "engine": "bounded_calculator",
+      "scope": "Arithmetic uses the observed mapped calculator when supported; model study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    },
+    {
+      "case": "bengali_or_banglish_answer",
+      "input": "ওই ফলকে বারো দিয়ে ভাগ করলে কত হবে?",
+      "answer": "হিসাব করে পেলাম 13.",
+      "passed": true,
+      "engine": "bounded_calculator",
+      "scope": "Arithmetic uses the observed mapped calculator when supported; model study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    },
+    {
+      "case": "bengali_or_banglish_answer",
+      "input": "bro ami porashona korte mon dite pari na, choto ekta practical tip dao",
+      "answer": "অবশ্যই, বস। যখন কোনো কাজের কথা মনে করতে সমস্যা হয়, তখন সেটা লিখে ফেলুন। অনেক সময় লিখলে মনে পড়ে যায় সহজে।",
+      "passed": true,
+      "engine": "real_model",
+      "scope": "Arithmetic uses the observed mapped calculator when supported; model study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    },
+    {
+      "case": "real_model_bengali_study_followup",
+      "input": "পড়ার মনোযোগের জন্য ২৫ মিনিট পড়া আর ৫ মিনিট বিরতি কীভাবে ব্যবহার করব?",
+      "answer": "বস, এটা খুবই ভালো একটা পরিকল্পনা। ২৫ মিনিট একটানা পড়ুন, তারপর ৫ মিনিটের জন্য একটু বিশ্রাম নিন। এতে মনোযোগ ধরে রাখা সহজ হবে।",
+      "passed": true,
+      "scope": "Real model answer and session history. Keyword check is limited; read the stored answers to judge context and quality."
+    },
+    {
+      "case": "real_model_bengali_study_followup",
+      "input": "ওই বিরতিতে ফোন না দেখে আর কী করতে পারি?",
+      "answer": "ফোন ব্যবহার না করার জন্য, বস, আপনি হালকা স্ট্রেচিং করতে পারেন অথবা এক গ্লাস জল পান করতে পারেন। এছাড়া, ঘর গোছানো বা অন্য কোনো হালকা কাজও করতে পারেন।",
+      "passed": true,
+      "scope": "Real model answer and session history. Keyword check is limited; read the stored answers to judge context and quality."
+    },
+    {
+      "case": "human_bengali_ASR",
+      "clip": "10040842285215808423.wav",
+      "expected": "বাঁধের উপর 100 ফুট চওড়া একটি জায়গা থেকে জল ছিটকে বেরোচ্ছে",
+      "result": {
+        "text": "বাদের উপর একশো ফুক চাও রা একটি জাইগা থেকে জল ছিটকে বেরোছে",
+        "language": "bn",
+        "local": true,
+        "needs_review": false,
+        "seconds": 16.468,
+        "recorded_seconds": 6.6,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "word_error_rate": 0.6364,
+      "acceptance": "WER <= 0.25 chosen before this run. Three clips do not establish general Bengali/Banglish accuracy.",
+      "source": "https://huggingface.co/datasets/google/fleurs/tree/main/data/bn_in",
+      "dataset_license": "CC BY 4.0",
+      "passed": false
+    },
+    {
+      "case": "human_bengali_ASR",
+      "clip": "10306894578494300217.wav",
+      "expected": "আপনি বুঝেছেন কিনা জানি না তবে মধ্য আমেরিকা থেকে এই দেশে বেশিরভাগ পণ্য শুল্কমুক্ত ভাবে এসেছে",
+      "result": {
+        "text": "আপনি বুঝিসেন কিনা জানি না তাবে মধ্য অমেরিকা থেকে এই দেশে বেশির বাগ করন শুন্ক মুক্তো ভাবে এশেছে",
+        "language": "bn",
+        "local": true,
+        "needs_review": false,
+        "seconds": 16.795,
+        "recorded_seconds": 9.48,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "word_error_rate": 0.5625,
+      "acceptance": "WER <= 0.25 chosen before this run. Three clips do not establish general Bengali/Banglish accuracy.",
+      "source": "https://huggingface.co/datasets/google/fleurs/tree/main/data/bn_in",
+      "dataset_license": "CC BY 4.0",
+      "passed": false
+    },
+    {
+      "case": "human_bengali_ASR",
+      "clip": "10491853252942033597.wav",
+      "expected": "বিজ্ঞানীরা জানাচ্ছেন সংঘর্ষের ফলে সৃষ্ট বিস্ফোরণ ছিল বিপুল",
+      "result": {
+        "text": "বিগ্গানীরা জানাছেন সাংগ্রাশের ফলে স্রিষ্টো বিশ্পারন ছিলো বিপোল",
+        "language": "bn",
+        "local": true,
+        "needs_review": false,
+        "seconds": 12.524,
+        "recorded_seconds": 8.04,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "word_error_rate": 0.875,
+      "acceptance": "WER <= 0.25 chosen before this run. Three clips do not establish general Bengali/Banglish accuracy.",
+      "source": "https://huggingface.co/datasets/google/fleurs/tree/main/data/bn_in",
+      "dataset_license": "CC BY 4.0",
+      "passed": false
+    },
+    {
+      "case": "actual_clock_and_neural_bengali_audio",
+      "answer": "বস, এখন 12:11 PM। IST সময়।",
+      "speech": {
+        "synthesized": true,
+        "audio": "6dcb9bbe77ad4b7e9db5ec8826f61d34.wav",
+        "duration_seconds": 3.7,
+        "sample_rate": 22050,
+        "seconds": 1.14,
+        "text_sha256": "f241d55222ba6d9caa5bff89403971b8463a99d36862dc67bfc1092d9b33fcec",
+        "local": true,
+        "language": "bn",
+        "engine": "Piper bn_BD-google-medium",
+        "audible_verified": false
+      },
+      "passed": true
+    },
+    {
+      "case": "real_voice_endurance_runner",
+      "passed": true,
+      "report": "voice-reliability-05-smoke.json"
+    },
+    {
+      "case": "actual_stale_speech_ticket_rejected_after_stop",
+      "passed": true
+    },
+    {
+      "case": "real_model_service_unavailable",
+      "state": "FAILED",
+      "error": "Provider unavailable or response invalid: URLError",
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "model_runs": [
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 5.305905910999854,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 2.6648639229999844,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 5.77677651099998,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 4.938163886000211,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 2.8775719449999997,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 1.4120148380000046,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 0.9752553059997808,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 1.3116035670000201,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 1.1096970950002287,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 0.000959539000177756,
+      "success": 0
+    }
+  ],
+  "self_peak_rss_bytes": 4093693952,
+  "state": "failed"
+}

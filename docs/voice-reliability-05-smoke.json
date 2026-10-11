@@ -1,0 +1,60 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "started_at": "2026-10-11T06:41:22.796260+00:00",
+  "requested_seconds": 60,
+  "scope": "Running assistant: actual native imports, HTTP health/SQLite, Piper-generated capital-of-France question -> local ASR -> configured real model -> fresh neural output WAV and actual clock command. No microphone or audible speaker.",
+  "cycles": [
+    {
+      "elapsed": 0.002,
+      "seconds": 5.462,
+      "asr_seconds": 1.761,
+      "tts_seconds": 1.222,
+      "tts_cached": false,
+      "output_seconds": 4.48
+    },
+    {
+      "elapsed": 15.008,
+      "seconds": 4.849,
+      "asr_seconds": 1.069,
+      "tts_seconds": 1.208,
+      "tts_cached": false,
+      "output_seconds": 4.57
+    },
+    {
+      "elapsed": 30.011,
+      "seconds": 4.856,
+      "asr_seconds": 1.084,
+      "tts_seconds": 1.166,
+      "tts_cached": false,
+      "output_seconds": 4.63
+    },
+    {
+      "elapsed": 45.014,
+      "seconds": 4.55,
+      "asr_seconds": 1.135,
+      "tts_seconds": 1.161,
+      "tts_cached": false,
+      "output_seconds": 5.06
+    }
+  ],
+  "health_samples": 5,
+  "max_health_gap_seconds": 15.005,
+  "backend_rss_peak_bytes": null,
+  "resource_errors": [
+    "RuntimeError: PID mapping is not the tested NEXUS backend; RSS unavailable"
+  ],
+  "errors": [],
+  "state": "passed",
+  "passed": true,
+  "24_hour_pass": false,
+  "windows_native_imports_verified": false,
+  "physical_microphone_speaker_verified": false,
+  "native_imports": {
+    "passed": true,
+    "error": ""
+  },
+  "model": "Gemma3-4B-real",
+  "provider": "openai-compatible",
+  "tested_elapsed_seconds": 60.0,
+  "updated_at": "2026-10-11T06:42:23.115429+00:00"
+}

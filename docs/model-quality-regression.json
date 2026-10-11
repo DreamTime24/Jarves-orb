@@ -1,0 +1,26 @@
+{
+  "scope": "Observed earlier real Gemma3 4B model failures; Bengali arithmetic now uses bounded calculator. Banglish model relevance can vary across sessions and runs. Not fabricated or a native microphone test.",
+  "failures": [
+    {
+      "case": "real_model_bengali_or_banglish_text",
+      "input": "বারো গুণ তেরো কত? এক বাক্যে উত্তর দাও।",
+      "answer": "বারো গুণ তেরো হলো ১৪৪। বস, আর কিছু জানতে চান?",
+      "passed": false,
+      "scope": "Expected arithmetic/follow-up values; study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    },
+    {
+      "case": "real_model_bengali_or_banglish_text",
+      "input": "ওই ফলকে বারো দিয়ে ভাগ করলে কত হবে?",
+      "answer": "ওই ফলটা হলো ১২। ১২ দিয়ে বারো ভাগ করলে হয় ১।",
+      "passed": false,
+      "scope": "Expected arithmetic/follow-up values; study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    },
+    {
+      "case": "bengali_or_banglish_answer",
+      "input": "bro ami porashona korte mon dite pari na, choto ekta practical tip dao",
+      "answer": "আরে বস, কোনো সমস্যা নেই। আপনি যখন কোনো নাম মনে করতে পারছেন না, তখন সেটাকে একটা পরিচিত জিনিসের সাথে মিলিয়ে নিন। যেমন, আপনি যদি কোনো বন্ধুর নাম মনে করতে না পারেন, তাহলে তার সাথে সম্পর্কিত কোনো ঘটনা বা বিষয় মনে করার চেষ্টা করুন।",
+      "passed": false,
+      "scope": "Arithmetic uses the observed mapped calculator when supported; model study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    }
+  ]
+}

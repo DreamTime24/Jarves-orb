@@ -1,0 +1,13 @@
+{
+  "platform": "Linux",
+  "network": "Kernel seccomp denies networking; socket-creation probe rejected",
+  "ort_telemetry": "disabled using documented API",
+  "model": "Whisper medium CPU int8",
+  "generic_prompt": null,
+  "output": "ভাশ কি হএছি সি বা�",
+  "seconds": 6.106,
+  "bengali_script": true,
+  "scope": "Generated Bengali Piper fixture, not a human recording",
+  "phrase_accuracy_passed": false,
+  "expected": "বস, কী হয়েছে? বলো, শুনছি।"
+}

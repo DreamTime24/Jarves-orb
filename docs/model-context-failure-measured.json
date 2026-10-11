@@ -1,0 +1,173 @@
+{
+  "platform": "linux",
+  "model": "Qwen/Qwen3-4B-GGUF Q4_K_M",
+  "weight_bytes": 2497280256,
+  "runtime": "llama.cpp CPU via local HTTP transport test harness",
+  "ollama_windows_tested": false,
+  "tests": [
+    {
+      "case": "bengali_study_ungrounded",
+      "workflow_completed": true,
+      "seconds": 43.048,
+      "answer": "সিরিজ বর্তনী এবং সমান্তরাল বর্তনী দুটি প্রধান প্রকারের বর্তনী যার মধ্যে বিদ্যুৎ প্রবাহ এবং ভোল্টেজ বিভিন্ন ভাবে বিনিয়োজিত হয়। নিচে দুটি বাক্যে এগুলোর পার্থক্য বাংলায় বুঝিয়ে দেওয়া হল:\n\n1. **সিরিজ বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ একই পথে সম্পূর্ণ রেখে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ সমান হয় এবং সমস্ত যন্ত্রের ভোল্টেজ সমষ্টি হয়।  \n2. **সমান্তরাল বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ বিভিন্ন পথে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ বিভিন্ন হতে পারে এবং প্রতিটি যন্ত্রের ভোল্টেজ সমান হয়।  \n\nএই পার্থক্য বাংলায় দুটি বাক্যে বুঝিয়ে দেওয়া হল।",
+      "error": "",
+      "retrieved_memory_count": 0,
+      "task": {
+        "id": "0a952c5943cf4a48aa9e1dd74018fb95",
+        "title": "সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য বাংলায় ঠিক দুইটি বাক্যে বুঝিয়ে দাও। Use series parallel circuit",
+        "goal": "সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য বাংলায় ঠিক দুইটি বাক্যে বুঝিয়ে দাও। Use series parallel circuits facts.",
+        "state": "COMPLETED",
+        "created_at": "2026-10-05T14:37:47.464573+00:00",
+        "updated_at": "2026-10-05T14:38:30.511937+00:00",
+        "due_at": null,
+        "result": "সিরিজ বর্তনী এবং সমান্তরাল বর্তনী দুটি প্রধান প্রকারের বর্তনী যার মধ্যে বিদ্যুৎ প্রবাহ এবং ভোল্টেজ বিভিন্ন ভাবে বিনিয়োজিত হয়। নিচে দুটি বাক্যে এগুলোর পার্থক্য বাংলায় বুঝিয়ে দেওয়া হল:\n\n1. **সিরিজ বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ একই পথে সম্পূর্ণ রেখে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ সমান হয় এবং সমস্ত যন্ত্রের ভোল্টেজ সমষ্টি হয়।  \n2. **সমান্তরাল বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ বিভিন্ন পথে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ বিভিন্ন হতে পারে এবং প্রতিটি যন্ত্রের ভোল্টেজ সমান হয়।  \n\nএই পার্থক্য বাংলায় দুটি বাক্যে বুঝিয়ে দেওয়া হল।",
+        "error": "",
+        "priority": 2,
+        "plan_rounds": 0,
+        "mode": "answer",
+        "steps": []
+      },
+      "factual_review": "pending human review in build"
+    },
+    {
+      "case": "bengali_study_grounded",
+      "workflow_completed": true,
+      "seconds": 52.674,
+      "answer": "সিরিজ বর্তনী ও সমান্তরাল বর্তনীর পার্থক্য নিচে দুটি বাক্যে বাংলায় বুঝিয়ে দেওয়া হল:\n\n1. **সিরিজ বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ একই পথে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ সমান হয় এবং সমস্ত যন্ত্রের ভোল্টেজ সমষ্টি হয়।\n\n2. **সমান্তরাল বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ বিভিন্ন পথে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ বিভিন্ন হতে পারে এবং প্রতিটি যন্ত্রের ভোল্টেজ সমান হয়।",
+      "error": "",
+      "retrieved_memory_count": 1,
+      "task": {
+        "id": "ebf198705de94a4c924648b3790d89a7",
+        "title": "সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য বাংলায় ঠিক দুইটি বাক্যে বুঝিয়ে দাও। Use series parallel circuit",
+        "goal": "সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য বাংলায় ঠিক দুইটি বাক্যে বুঝিয়ে দাও। Use series parallel circuits facts.",
+        "state": "COMPLETED",
+        "created_at": "2026-10-05T14:38:30.514188+00:00",
+        "updated_at": "2026-10-05T14:39:23.187213+00:00",
+        "due_at": null,
+        "result": "সিরিজ বর্তনী ও সমান্তরাল বর্তনীর পার্থক্য নিচে দুটি বাক্যে বাংলায় বুঝিয়ে দেওয়া হল:\n\n1. **সিরিজ বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ একই পথে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ সমান হয় এবং সমস্ত যন্ত্রের ভোল্টেজ সমষ্টি হয়।\n\n2. **সমান্তরাল বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ বিভিন্ন পথে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ বিভিন্ন হতে পারে এবং প্রতিটি যন্ত্রের ভোল্টেজ সমান হয়।",
+        "error": "",
+        "priority": 2,
+        "plan_rounds": 0,
+        "mode": "answer",
+        "steps": []
+      },
+      "factual_review": "pending human review in build"
+    },
+    {
+      "case": "real_model_repository_repair",
+      "workflow_state": "COMPLETED",
+      "elapsed_seconds": 110.272,
+      "test_suite_passed": false,
+      "test_output": "test_negative (test_calc.Tests.test_negative) ... FAIL\ntest_positive (test_calc.Tests.test_positive) ... FAIL\ntest_zero (test_calc.Tests.test_zero) ... ok\n\n======================================================================\nFAIL: test_negative (test_calc.Tests.test_negative)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmpb4ow2b10/workspace/repair/test_calc.py\", line 5, in test_negative\n    def test_negative(self):self.assertEqual(add(-2, 5), 3)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: -7 != 3\n\n======================================================================\nFAIL: test_positive (test_calc.Tests.test_positive)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmpb4ow2b10/workspace/repair/test_calc.py\", line 4, in test_positive\n    def test_positive(self):self.assertEqual(add(3, 4), 7)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: -1 != 7\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nFAILED (failures=2)\n",
+      "file_content": "def add(a, b):\n    return a - b\n",
+      "approved_actions": [],
+      "task": {
+        "id": "5db9880de8434e9b9760270f19e2a154",
+        "title": "Fix repair/calc.py so add(a,b) correctly adds numbers. Read repair/calc.py and repair/test_calc.py, ",
+        "goal": "Fix repair/calc.py so add(a,b) correctly adds numbers. Read repair/calc.py and repair/test_calc.py, change only calc.py, then run the python_tests check in repair. Do not change tests. Stop after observed passing tests.",
+        "state": "COMPLETED",
+        "created_at": "2026-10-05T14:39:23.189642+00:00",
+        "updated_at": "2026-10-05T14:41:13.409961+00:00",
+        "due_at": null,
+        "result": "সিরিজ বর্তনী এবং সমান্তরাল বর্তনীর পার্থক্য নিচে দুটি বাক্যে বাংলায় বুঝিয়ে দেওয়া হল:\n\n1. **সিরিজ বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ একই পথে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ সমান হয় এবং সমস্ত যন্ত্রের ভোল্টেজ সমষ্টি হয়।\n\n2. **সমান্তরাল বর্তনী** হল যে সব যন্ত্র বা সংরক্ষণ বিভিন্ন পথে সামনে থেকে পিছনে যায়। এখানে প্রতিটি যন্ত্রের প্রবাহ বিভিন্ন হতে পারে এবং প্রতিটি যন্ত্রের ভোল্টেজ সমান হয়।",
+        "error": "",
+        "priority": 2,
+        "plan_rounds": 0,
+        "mode": "agent",
+        "steps": []
+      }
+    }
+  ],
+  "smoke": {
+    "model": "qwen3-4b-test",
+    "platform": "Linux",
+    "passed": true,
+    "cases": [
+      {
+        "case": "json",
+        "passed": true,
+        "seconds": 1.976,
+        "output": {
+          "answer": "ready",
+          "steps": []
+        }
+      },
+      {
+        "case": "arithmetic",
+        "passed": true,
+        "seconds": 1.964,
+        "output": {
+          "answer": "156",
+          "steps": []
+        }
+      },
+      {
+        "case": "bengali",
+        "passed": true,
+        "seconds": 2.969,
+        "output": {
+          "answer": "প্রস্তুত",
+          "steps": []
+        }
+      }
+    ],
+    "scope": "Three basic smoke cases; not an advanced coding, factual accuracy or AGI benchmark."
+  },
+  "model_runs": [
+    {
+      "id": 1,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 1.975231704999942,
+      "success": 1,
+      "prompt_tokens": 25,
+      "output_tokens": 11,
+      "created_at": "2026-10-05T14:37:42.530266+00:00"
+    },
+    {
+      "id": 2,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 1.9633803819999684,
+      "success": 1,
+      "prompt_tokens": 32,
+      "output_tokens": 13,
+      "created_at": "2026-10-05T14:37:44.494385+00:00"
+    },
+    {
+      "id": 3,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 2.968770584999902,
+      "success": 1,
+      "prompt_tokens": 65,
+      "output_tokens": 19,
+      "created_at": "2026-10-05T14:37:47.463774+00:00"
+    },
+    {
+      "id": 4,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 43.04141259499988,
+      "success": 1,
+      "prompt_tokens": 183,
+      "output_tokens": 612,
+      "created_at": "2026-10-05T14:38:30.510147+00:00"
+    },
+    {
+      "id": 5,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 52.66685423600006,
+      "success": 1,
+      "prompt_tokens": 1221,
+      "output_tokens": 427,
+      "created_at": "2026-10-05T14:39:23.185389+00:00"
+    },
+    {
+      "id": 6,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 110.21393036800009,
+      "success": 1,
+      "prompt_tokens": 2283,
+      "output_tokens": 444,
+      "created_at": "2026-10-05T14:41:13.408051+00:00"
+    }
+  ],
+  "review": "Conversation mode returned Bengali answers, but did not follow the two-sentence requirement and fluency was weak. The coding request was contaminated by old study context and returned a physics answer without acting; all independent coding tests failed. This failing baseline is preserved; current-task ordering and action success checks were subsequently corrected."
+}

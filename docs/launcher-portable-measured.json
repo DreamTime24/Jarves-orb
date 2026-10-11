@@ -1,0 +1,10 @@
+{
+  "source": "launcher/portable.c",
+  "compiler": "Zig 0.13.0 Windows GNU cross target",
+  "machine": "0x8664",
+  "subsystem": 2,
+  "gui_subsystem": true,
+  "bytes": 152576,
+  "sha256": "f996991e3d2558bb1863e0b5ba8f763222bc1fed0d0cb59114052a9ae951b31c",
+  "native_windows_execution_tested": false
+}

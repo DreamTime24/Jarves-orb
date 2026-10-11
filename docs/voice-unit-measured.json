@@ -1,0 +1,9 @@
+{
+  "version": "0.3.0",
+  "platform": "Linux",
+  "python_tests": 68,
+  "passed": true,
+  "seconds": 4.692,
+  "javascript_session_checks": "Passed VAD, PCM resampling, automatic follow-up, interruption, late transcript/reply cancellation and unclear-input handling",
+  "scope": "Real HTTP/SQLite/filesystem with labeled model test doubles; not a fluency benchmark"
+}

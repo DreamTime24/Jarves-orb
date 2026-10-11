@@ -1,0 +1,11 @@
+{
+  "version": "0.5.0",
+  "launcher_sha256": "f996991e3d2558bb1863e0b5ba8f763222bc1fed0d0cb59114052a9ae951b31c",
+  "machine": "0x8664",
+  "GUI_subsystem": 2,
+  "bundled_wheels": 29,
+  "python": "3.13.16",
+  "cmd_CRLF_verified": true,
+  "scope": "Current file/static checks, no Windows binary execution",
+  "windows_native_verified": false
+}

@@ -1,0 +1,23 @@
+{
+  "platform": "linux",
+  "passed": true,
+  "checks": [
+    {
+      "launch": 1,
+      "authenticated_health": true,
+      "duplicate_exit": 3,
+      "clock_executed": true,
+      "normal_shutdown_exit": 0,
+      "session_removed": true
+    },
+    {
+      "launch": 2,
+      "authenticated_health": true,
+      "duplicate_exit": 3,
+      "clock_executed": true,
+      "normal_shutdown_exit": 0,
+      "session_removed": true
+    }
+  ],
+  "scope": "Real source supervisor, authenticated HTTP, single-instance lock, clock, shutdown and reopen; Windows PE/UI/hardware not executed"
+}

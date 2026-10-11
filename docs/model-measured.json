@@ -1,0 +1,161 @@
+{
+  "platform": "linux",
+  "model": "Qwen/Qwen3-4B-GGUF Q4_K_M",
+  "weight_bytes": 2497280256,
+  "runtime": "llama.cpp CPU via local HTTP transport test harness",
+  "ollama_windows_tested": false,
+  "tests": [
+    {
+      "case": "real_model_repository_repair",
+      "workflow_state": "COMPLETED",
+      "elapsed_seconds": 88.299,
+      "test_suite_passed": true,
+      "test_output": "test_negative (test_calc.Tests.test_negative) ... ok\ntest_positive (test_calc.Tests.test_positive) ... ok\ntest_zero (test_calc.Tests.test_zero) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "file_content": "def add(a, b):\n    return a + b",
+      "approved_actions": [
+        {
+          "tool": "files.write",
+          "arguments": {
+            "path": "repair/calc.py",
+            "content": "def add(a, b):\n    return a + b",
+            "expected_sha256": "e1a894022d1a082987b87adecb623438c9e386d86b2b621cff4a5fe7fdf7edc8"
+          }
+        },
+        {
+          "tool": "project.check",
+          "arguments": {
+            "path": "repair",
+            "check": "python_tests"
+          }
+        }
+      ],
+      "task": {
+        "id": "7bac981506044b66ae90f57c0c321761",
+        "title": "Fix repair/calc.py so add(a,b) correctly adds numbers. Read repair/calc.py and repair/test_calc.py, ",
+        "goal": "Fix repair/calc.py so add(a,b) correctly adds numbers. Read repair/calc.py and repair/test_calc.py, change only calc.py, then run the python_tests check in repair. Do not change tests. Stop after observed passing tests.",
+        "state": "COMPLETED",
+        "created_at": "2026-10-05T14:51:57.202055+00:00",
+        "updated_at": "2026-10-05T14:53:25.447646+00:00",
+        "due_at": null,
+        "result": "The add function in repair/calc.py has been corrected to perform addition instead of subtraction. The tests have been successfully run and passed.",
+        "error": "",
+        "priority": 2,
+        "plan_rounds": 1,
+        "mode": "agent",
+        "steps": [
+          {
+            "id": "2702288d06c3477ca1461534d6a45c50",
+            "task_id": "7bac981506044b66ae90f57c0c321761",
+            "position": 0,
+            "title": "Read repair/calc.py",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"def add(a, b):\\n    return a - b\\n\", \"sha256\": \"e1a894022d1a082987b87adecb623438c9e386d86b2b621cff4a5fe7fdf7edc8\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "57056a8ee76d45fc98856480d3072648",
+            "task_id": "7bac981506044b66ae90f57c0c321761",
+            "position": 1,
+            "title": "Read repair/test_calc.py",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/test_calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"import unittest\\nfrom calc import add\\nclass Tests(unittest.TestCase):\\n def test_positive(self):self.assertEqual(add(3, 4), 7)\\n def test_negative(self):self.assertEqual(add(-2, 5), 3)\\n def test_zero(self):self.assertEqual(add(9, 0), 9)\\n\", \"sha256\": \"aae51fdbe4582c85133acd6731fec33333e5f7a57c4e57c78d0a8c5ffc378251\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "e2e9d5c9d440471dbf2ddfcc52dcbddb",
+            "task_id": "7bac981506044b66ae90f57c0c321761",
+            "position": 2,
+            "title": "Edit repair/calc.py to fix the add function",
+            "tool": "files.write",
+            "arguments": {
+              "path": "repair/calc.py",
+              "content": "def add(a, b):\n    return a + b",
+              "expected_sha256": "e1a894022d1a082987b87adecb623438c9e386d86b2b621cff4a5fe7fdf7edc8"
+            },
+            "state": "COMPLETED",
+            "result": "{\"path\": \"repair/calc.py\", \"sha256\": \"8f75a68646c879fd0cff5c02708c010fb1c01d67ef9930d4e419106feb7897aa\", \"verified\": true, \"note\": \"File bytes verified. Correctness still requires tests.\"}",
+            "error": ""
+          },
+          {
+            "id": "4e2e343f3b1643d2af11464075797d66",
+            "task_id": "7bac981506044b66ae90f57c0c321761",
+            "position": 3,
+            "title": "Run python_tests check in repair",
+            "tool": "project.check",
+            "arguments": {
+              "path": "repair",
+              "check": "python_tests"
+            },
+            "state": "COMPLETED",
+            "result": "{\"exit_code\": 0, \"output\": \"test_negative (test_calc.Tests.test_negative) ... ok\\ntest_positive (test_calc.Tests.test_positive) ... ok\\ntest_zero (test_calc.Tests.test_zero) ... ok\\n\\n----------------------------------------------------------------------\\nRan 3 tests in 0.000s\\n\\nOK\\n\", \"limited\": false, \"verified\": true, \"note\": \"A successful exit is not proof of adequate test coverage.\"}",
+            "error": ""
+          }
+        ]
+      }
+    }
+  ],
+  "study_results_preserved_in": "model-context-failure-measured.json",
+  "smoke": {
+    "model": "qwen3-4b-test",
+    "platform": "Linux",
+    "passed": true,
+    "cases": [
+      {
+        "case": "json",
+        "passed": true,
+        "seconds": 1.976,
+        "output": {
+          "answer": "ready",
+          "steps": []
+        }
+      },
+      {
+        "case": "arithmetic",
+        "passed": true,
+        "seconds": 1.964,
+        "output": {
+          "answer": "156",
+          "steps": []
+        }
+      },
+      {
+        "case": "bengali",
+        "passed": true,
+        "seconds": 2.969,
+        "output": {
+          "answer": "প্রস্তুত",
+          "steps": []
+        }
+      }
+    ],
+    "scope": "Three basic smoke cases; not an advanced coding, factual accuracy or AGI benchmark."
+  },
+  "model_runs": [
+    {
+      "id": 1,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 41.00629269399997,
+      "success": 1,
+      "prompt_tokens": 1061,
+      "output_tokens": 171,
+      "created_at": "2026-10-05T14:52:38.211740+00:00"
+    },
+    {
+      "id": 2,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 47.139562035999916,
+      "success": 1,
+      "prompt_tokens": 1712,
+      "output_tokens": 235,
+      "created_at": "2026-10-05T14:53:25.444825+00:00"
+    }
+  ]
+}

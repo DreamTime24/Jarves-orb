@@ -1,0 +1,15 @@
+{
+  "platform": "Linux",
+  "requested_seconds": 600,
+  "scope": "Disposable backend, HTTP health, SQLite, memory/task persistence, two forced process restarts; no native UI/model/microphone/speaker load",
+  "samples": 60,
+  "forced_restarts": 2,
+  "errors": [],
+  "resource_errors": [
+    "ModuleNotFoundError: No module named 'psutil'"
+  ],
+  "rss_peak_bytes": null,
+  "24_hour_pass": false,
+  "passed": true,
+  "actual_elapsed_seconds": 600.004
+}

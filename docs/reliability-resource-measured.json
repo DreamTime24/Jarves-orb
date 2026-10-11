@@ -1,0 +1,17 @@
+{
+  "platform": "Linux",
+  "requested_seconds": 30,
+  "scope": "Disposable backend, HTTP health, SQLite, memory/task persistence, two forced process restarts; no native UI/model/microphone/speaker load",
+  "samples": 15,
+  "forced_restarts": 2,
+  "errors": [],
+  "resource_errors": [
+    "RuntimeError: PID mapping is not the tested backend",
+    "NoSuchProcess: process PID not found (pid=40)",
+    "NoSuchProcess: process PID not found (pid=63)"
+  ],
+  "rss_peak_bytes": null,
+  "24_hour_pass": false,
+  "passed": true,
+  "actual_elapsed_seconds": 30.007
+}

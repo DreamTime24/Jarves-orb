@@ -1,0 +1,17 @@
+{
+  "platform": "linux",
+  "passed": true,
+  "checks": [
+    "16 Bengali speaker choices",
+    "Voice preferences saved by real backend",
+    "Real Bengali greeting WAV plays before microphone capture",
+    "Controlled transcript -> persisted voice task -> real neural reply -> automatic listening",
+    "Interrupt stops output and opens next listening turn",
+    "End stops the microphone and voice session",
+    "Navigation discards greeting and stops the voice session",
+    "Voice room at 390px without horizontal overflow",
+    "No JavaScript page errors"
+  ],
+  "errors": [],
+  "scope": "Real Chromium + local HTTP/SQLite/Piper WAV playback. Microphone input callbacks are controlled fixtures. Native Windows and physical devices not tested."
+}

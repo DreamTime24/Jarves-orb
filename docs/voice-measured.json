@@ -1,0 +1,24 @@
+{
+  "platform": "linux",
+  "model": "Systran/faster-whisper-small",
+  "runtime": "CPU int8",
+  "passed": true,
+  "seconds_including_load": 5.318,
+  "job": {
+    "id": "8689a115f1f94fd9ab4cb95a2c2caccc",
+    "lane": "speech-input",
+    "state": "COMPLETED",
+    "progress": "Completed",
+    "result": {
+      "text": "And so my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+      "language": "en",
+      "local": true,
+      "note": "Review the transcript before submitting it."
+    },
+    "error": "",
+    "created_at": 1791210750.4234054
+  },
+  "fixture": "https://github.com/SYSTRAN/faster-whisper/blob/master/tests/data/jfk.flac",
+  "scope": "Real recorded English WAV through authenticated binary HTTP and background transcription; Windows microphone/speaker and Bengali recorded audio not tested",
+  "windows_devices_tested": false
+}

@@ -1,0 +1,228 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "model": "Gemma3-4B Q4_K_M, official Ollama layer",
+  "bengali_asr": "Systran/faster-whisper-large-v3 / CPU int8",
+  "asr_max_new_tokens": 400,
+  "cpu_only": true,
+  "runtime": "Official llama.cpp b11429, real local HTTP provider",
+  "scope": "Prerecorded human English JFK and first three bounded FLEURS Bengali dev clips; synthetic neural question -> actual ASR -> actual model -> neural WAV; text follow-ups and clock. No provider/audio stubs. No physical mic/speaker, Windows executable or 24h acceptance.",
+  "windows_native_verified": false,
+  "physical_devices_verified": false,
+  "24_hour_pass": false,
+  "cases": [
+    {
+      "case": "human_english_ASR",
+      "expected": "And so my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+      "result": {
+        "text": "And so my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+        "language": "en",
+        "local": true,
+        "needs_review": false,
+        "seconds": 2.161,
+        "recorded_seconds": 11.0,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "word_error_rate": 0.0,
+      "passed": true,
+      "source": "https://github.com/SYSTRAN/faster-whisper/blob/master/tests/data/jfk.flac"
+    },
+    {
+      "case": "synthetic_question_full_real_pipeline",
+      "input_kind": "Piper input, not physical microphone",
+      "asr": {
+        "text": "What is 12 times 13?",
+        "language": "en",
+        "local": true,
+        "needs_review": false,
+        "seconds": 1.046,
+        "recorded_seconds": 1.602,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "answer": "12 times 13 is 156, boss. Do you want me to perform any other calculations?",
+      "speech": {
+        "synthesized": true,
+        "audio": "576f94b6a3224e9d93e32f9738fa8e0d.wav",
+        "duration_seconds": 5.54,
+        "sample_rate": 22050,
+        "seconds": 1.296,
+        "text_sha256": "f2aa845b2852adf0a2675ba378f87e082412d2a6ddfa2e3c55561aaddba7b12b",
+        "local": true,
+        "language": "en",
+        "engine": "Piper en_US-ryan-medium",
+        "audible_verified": false
+      },
+      "seconds_after_asr": 6.592,
+      "passed": true
+    },
+    {
+      "case": "real_model_english_followup",
+      "answer": "Dividing 156 by 12 gives you 13, boss. Is there anything else I can calculate for you?",
+      "passed": true
+    },
+    {
+      "case": "real_model_bengali_or_banglish_text",
+      "input": "বারো গুণ তেরো কত? এক বাক্যে উত্তর দাও।",
+      "answer": "বারো গুণ তেরো হলো ১৪৪। বস, আর কিছু জানতে চান?",
+      "passed": false,
+      "scope": "Expected arithmetic/follow-up values; study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    },
+    {
+      "case": "real_model_bengali_or_banglish_text",
+      "input": "ওই ফলকে বারো দিয়ে ভাগ করলে কত হবে?",
+      "answer": "ওই ফলটা হলো ১২। ১২ দিয়ে বারো ভাগ করলে হয় ১।",
+      "passed": false,
+      "scope": "Expected arithmetic/follow-up values; study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    },
+    {
+      "case": "real_model_bengali_or_banglish_text",
+      "input": "bro ami porashona korte mon dite pari na, choto ekta practical tip dao",
+      "answer": "আরে, অবশ্যই! যখন কোনো কাজের জন্য মন বসে যায়, তখন ছোট করে কিছু ব্যায়াম বা স্ট্রেচিং করো। এতে শরীর ও মন দুটোই চাঙ্গা হয়ে উঠবে।",
+      "passed": true,
+      "scope": "Expected arithmetic/follow-up values; study-tip keywords are a limited relevance check, not human naturalness acceptance"
+    },
+    {
+      "case": "human_bengali_ASR",
+      "clip": "10040842285215808423.wav",
+      "expected": "বাঁধের উপর 100 ফুট চওড়া একটি জায়গা থেকে জল ছিটকে বেরোচ্ছে",
+      "result": {
+        "text": "বাদের উপর একশো ফুক চাও রা একটি জাইগা থেকে জল ছিটকে বেরোছে",
+        "language": "bn",
+        "local": true,
+        "needs_review": false,
+        "seconds": 16.732,
+        "recorded_seconds": 6.6,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "word_error_rate": 0.6364,
+      "acceptance": "WER <= 0.25 chosen before this run. Three clips do not establish general Bengali/Banglish accuracy.",
+      "source": "https://huggingface.co/datasets/google/fleurs/tree/main/data/bn_in",
+      "dataset_license": "CC BY 4.0",
+      "passed": false
+    },
+    {
+      "case": "human_bengali_ASR",
+      "clip": "10306894578494300217.wav",
+      "expected": "আপনি বুঝেছেন কিনা জানি না তবে মধ্য আমেরিকা থেকে এই দেশে বেশিরভাগ পণ্য শুল্কমুক্ত ভাবে এসেছে",
+      "result": {
+        "text": "আপনি বুঝিসেন কিনা জানি না তাবে মধ্য অমেরিকা থেকে এই দেশে বেশির বাগ করন শুন্ক মুক্তো ভাবে এশেছে",
+        "language": "bn",
+        "local": true,
+        "needs_review": false,
+        "seconds": 17.679,
+        "recorded_seconds": 9.48,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "word_error_rate": 0.5625,
+      "acceptance": "WER <= 0.25 chosen before this run. Three clips do not establish general Bengali/Banglish accuracy.",
+      "source": "https://huggingface.co/datasets/google/fleurs/tree/main/data/bn_in",
+      "dataset_license": "CC BY 4.0",
+      "passed": false
+    },
+    {
+      "case": "human_bengali_ASR",
+      "clip": "10491853252942033597.wav",
+      "expected": "বিজ্ঞানীরা জানাচ্ছেন সংঘর্ষের ফলে সৃষ্ট বিস্ফোরণ ছিল বিপুল",
+      "result": {
+        "text": "বিগ্গানীরা জানাছেন সাংগ্রাশের ফলে স্রিষ্টো বিশ্পারন ছিলো বিপোল",
+        "language": "bn",
+        "local": true,
+        "needs_review": false,
+        "seconds": 13.19,
+        "recorded_seconds": 8.04,
+        "note": "Review unclear input; voice commands are never approvals."
+      },
+      "word_error_rate": 0.875,
+      "acceptance": "WER <= 0.25 chosen before this run. Three clips do not establish general Bengali/Banglish accuracy.",
+      "source": "https://huggingface.co/datasets/google/fleurs/tree/main/data/bn_in",
+      "dataset_license": "CC BY 4.0",
+      "passed": false
+    },
+    {
+      "case": "actual_clock_and_neural_bengali_audio",
+      "answer": "বস, এখন 12:04 PM। IST সময়।",
+      "speech": {
+        "synthesized": true,
+        "audio": "4b7715ba5da146939f29da2a3d050c9c.wav",
+        "duration_seconds": 3.78,
+        "sample_rate": 22050,
+        "seconds": 1.12,
+        "text_sha256": "aa0a45f9526ee78cdcc0008dc208fc11f822e2cfabb97d3eee728a9d52711103",
+        "local": true,
+        "language": "bn",
+        "engine": "Piper bn_BD-google-medium",
+        "audible_verified": false
+      },
+      "passed": true
+    },
+    {
+      "case": "real_voice_endurance_runner",
+      "passed": true,
+      "report": "voice-reliability-05-smoke.json"
+    },
+    {
+      "case": "actual_stale_speech_ticket_rejected_after_stop",
+      "passed": true
+    },
+    {
+      "case": "real_model_service_unavailable",
+      "state": "FAILED",
+      "error": "Provider unavailable or response invalid: URLError",
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "model_runs": [
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 4.721614965000072,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 2.4499405450001177,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 4.262006627999881,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 2.061703424999905,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 4.212901311999985,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 3.0117605540001477,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 1.5523936150000281,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 1.6625588279998738,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 1.4910933329999807,
+      "success": 1
+    },
+    {
+      "model": "Gemma3-4B-real",
+      "elapsed_seconds": 0.0012497269999585114,
+      "success": 0
+    }
+  ],
+  "self_peak_rss_bytes": 4111138816,
+  "state": "failed"
+}

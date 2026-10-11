@@ -1,0 +1,198 @@
+{
+  "platform": "linux",
+  "model": "Qwen/Qwen3-4B-GGUF Q4_K_M",
+  "weight_bytes": 2497280256,
+  "runtime": "llama.cpp CPU via local HTTP transport test harness",
+  "ollama_windows_tested": false,
+  "tests": [
+    {
+      "case": "bengali_study_ungrounded",
+      "workflow_completed": false,
+      "seconds": 61.774,
+      "answer": "",
+      "error": "",
+      "retrieved_memory_count": 0,
+      "factual_review": "pending human review in build"
+    },
+    {
+      "case": "bengali_study_grounded",
+      "workflow_completed": false,
+      "seconds": 52.996,
+      "answer": "",
+      "error": "",
+      "retrieved_memory_count": 1,
+      "factual_review": "pending human review in build"
+    },
+    {
+      "case": "real_model_repository_repair",
+      "workflow_state": "FAILED",
+      "elapsed_seconds": 23.715,
+      "test_suite_passed": false,
+      "test_output": "test_negative (test_calc.Tests.test_negative) ... FAIL\ntest_positive (test_calc.Tests.test_positive) ... FAIL\ntest_zero (test_calc.Tests.test_zero) ... ok\n\n======================================================================\nFAIL: test_negative (test_calc.Tests.test_negative)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmpomt4o2k3/workspace/repair/test_calc.py\", line 5, in test_negative\n    def test_negative(self):self.assertEqual(add(-2, 5), 3)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: -7 != 3\n\n======================================================================\nFAIL: test_positive (test_calc.Tests.test_positive)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/tmpomt4o2k3/workspace/repair/test_calc.py\", line 4, in test_positive\n    def test_positive(self):self.assertEqual(add(3, 4), 7)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: -1 != 7\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nFAILED (failures=2)\n",
+      "file_content": "def add(a, b):\n    return a - b\n",
+      "approved_actions": [],
+      "task": {
+        "id": "3bfcbc0504f14fe292259b0de4969656",
+        "title": "Fix repair/calc.py so add(a,b) correctly adds numbers. Read the implementation and test_calc.py, cha",
+        "goal": "Fix repair/calc.py so add(a,b) correctly adds numbers. Read the implementation and test_calc.py, change only calc.py, then run the python_tests check in repair. Do not change tests. Stop after observed passing tests.",
+        "state": "FAILED",
+        "created_at": "2026-10-05T14:34:36.075523+00:00",
+        "updated_at": "2026-10-05T14:34:59.736875+00:00",
+        "due_at": null,
+        "result": "",
+        "error": "[Errno 2] No such file or directory: '/tmp/tmpomt4o2k3/workspace/test_calc.py'",
+        "priority": 2,
+        "plan_rounds": 1,
+        "steps": [
+          {
+            "id": "e00e0e5d5dec4e93847f63fb5e85b30a",
+            "task_id": "3bfcbc0504f14fe292259b0de4969656",
+            "position": 0,
+            "title": "Read and understand the current implementation of calc.py",
+            "tool": "files.read",
+            "arguments": {
+              "path": "repair/calc.py"
+            },
+            "state": "COMPLETED",
+            "result": "{\"content\": \"def add(a, b):\\n    return a - b\\n\", \"sha256\": \"e1a894022d1a082987b87adecb623438c9e386d86b2b621cff4a5fe7fdf7edc8\", \"redacted\": false}",
+            "error": ""
+          },
+          {
+            "id": "539afbad31a240898ad57ddac15d161b",
+            "task_id": "3bfcbc0504f14fe292259b0de4969656",
+            "position": 1,
+            "title": "Review test_calc.py to identify test cases",
+            "tool": "files.read",
+            "arguments": {
+              "path": "test_calc.py"
+            },
+            "state": "FAILED",
+            "result": "",
+            "error": "[Errno 2] No such file or directory: '/tmp/tmpomt4o2k3/workspace/test_calc.py'"
+          },
+          {
+            "id": "e5aca7177e7a4cbfbbbae9be92736df3",
+            "task_id": "3bfcbc0504f14fe292259b0de4969656",
+            "position": 2,
+            "title": "Modify calc.py to correct the add(a,b) function",
+            "tool": "files.write",
+            "arguments": {
+              "path": "repair/calc.py",
+              "content": "def add(a, b):\n    return a + b",
+              "expected_sha256": "sha256('def add(a, b):\n    return a + b')"
+            },
+            "state": "PENDING",
+            "result": "",
+            "error": ""
+          },
+          {
+            "id": "cabb2c3bbfd24dc7b54dd3a59f87d065",
+            "task_id": "3bfcbc0504f14fe292259b0de4969656",
+            "position": 3,
+            "title": "Run the python_tests check to verify the fix",
+            "tool": "project.check",
+            "arguments": {
+              "path": "repair",
+              "check": "python_tests"
+            },
+            "state": "PENDING",
+            "result": "",
+            "error": ""
+          }
+        ]
+      }
+    }
+  ],
+  "smoke": {
+    "model": "qwen3-4b-test",
+    "platform": "Linux",
+    "passed": true,
+    "cases": [
+      {
+        "case": "json",
+        "passed": true,
+        "seconds": 3.685,
+        "output": {
+          "answer": "ready",
+          "steps": []
+        }
+      },
+      {
+        "case": "arithmetic",
+        "passed": true,
+        "seconds": 3.679,
+        "output": {
+          "answer": "156",
+          "steps": []
+        }
+      },
+      {
+        "case": "bengali",
+        "passed": true,
+        "seconds": 3.509,
+        "output": {
+          "answer": "প্রস্তুত",
+          "steps": []
+        }
+      }
+    ],
+    "scope": "Three basic smoke cases; not an advanced coding, factual accuracy or AGI benchmark."
+  },
+  "model_runs": [
+    {
+      "id": 1,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 3.6839386740000464,
+      "success": 1,
+      "prompt_tokens": 25,
+      "output_tokens": 11,
+      "created_at": "2026-10-05T14:32:34.113223+00:00"
+    },
+    {
+      "id": 2,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 3.678570074999925,
+      "success": 1,
+      "prompt_tokens": 32,
+      "output_tokens": 13,
+      "created_at": "2026-10-05T14:32:37.792734+00:00"
+    },
+    {
+      "id": 3,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 3.508114706000015,
+      "success": 1,
+      "prompt_tokens": 65,
+      "output_tokens": 19,
+      "created_at": "2026-10-05T14:32:41.301471+00:00"
+    },
+    {
+      "id": 4,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 61.760098983000034,
+      "success": 1,
+      "prompt_tokens": 1027,
+      "output_tokens": 345,
+      "created_at": "2026-10-05T14:33:43.066862+00:00"
+    },
+    {
+      "id": 5,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 52.968625084999985,
+      "success": 1,
+      "prompt_tokens": 1347,
+      "output_tokens": 370,
+      "created_at": "2026-10-05T14:34:36.051891+00:00"
+    },
+    {
+      "id": 6,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 23.643710419999934,
+      "success": 1,
+      "prompt_tokens": 990,
+      "output_tokens": 185,
+      "created_at": "2026-10-05T14:34:59.723142+00:00"
+    }
+  ],
+  "review": "Baseline: agent-mode study requests did not produce a final answer. Repository repair failed on an incorrectly scoped test-file path; original file and test failures retained. This is not a success result."
+}

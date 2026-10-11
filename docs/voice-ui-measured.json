@@ -1,0 +1,18 @@
+{
+  "platform": "linux",
+  "passed": true,
+  "playback": {
+    "readyState": 4,
+    "duration": 5.10839,
+    "paused": false,
+    "currentTime": 0.152405
+  },
+  "checks": [
+    "Actual task result synthesized by local Piper",
+    "Authenticated WAV rendered as browser audio",
+    "Stop removes playback control",
+    "No page errors"
+  ],
+  "errors": [],
+  "windows_devices_tested": false
+}

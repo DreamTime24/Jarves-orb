@@ -1,0 +1,13 @@
+{
+  "platform": "Linux",
+  "network": "Kernel seccomp denies networking; socket-creation probe rejected",
+  "ort_telemetry": "disabled using documented API",
+  "model": "Whisper small CPU int8",
+  "generic_prompt": "এটি বাংলা ভাষায় একটি কথোপকথন।",
+  "output": "পতাটা� 다들 নেটাুো একষনে সায় চবটা সাকাুিকটা পেণেযস পতেয পতুনযাুে চবটটে যাকরসা পরেযরেয় ষা ঌ নেতুনিকরসা কতাপানে পতেরস�",
+  "seconds": 31.921,
+  "bengali_script": true,
+  "scope": "Generated Bengali Piper fixture, not a human recording",
+  "phrase_accuracy_passed": false,
+  "expected": "বস, কী হয়েছে? বলো, শুনছি।"
+}

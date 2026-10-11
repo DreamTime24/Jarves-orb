@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "error": "gaierror: [Errno -3] Temporary failure in name resolution",
+  "seconds": 0.001
+}

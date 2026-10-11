@@ -1,0 +1,123 @@
+{
+  "network": "Kernel seccomp denies networking; probe verified",
+  "scope": "One generated Bengali phrase at 0.85x through 16 Piper speakers and independent Whisper medium. Similarity is not subjective naturalness or human microphone accuracy.",
+  "expected": "বস, কী হয়েছে? বলো, শুনছি।",
+  "results": [
+    {
+      "speaker": 0,
+      "transcript": "बाश की हुए छे? बालो, सून्छी।",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/4548901f7a514caa9c00a698eea28775.wav",
+      "duration": 3.46
+    },
+    {
+      "speaker": 1,
+      "transcript": "बाश की हुए छे? बालो, सुन्ची!",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/1d82eccb363240eaa018be5cd43f41af.wav",
+      "duration": 3.71
+    },
+    {
+      "speaker": 2,
+      "transcript": "बाश की हुए थे? बालो शुन्छी।",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/e08f62e444cb4a6491e0a59394cbea07.wav",
+      "duration": 4.16
+    },
+    {
+      "speaker": 3,
+      "transcript": "बाश की हुई छे? बालो शून्छी।",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/5834760bc8584bc5825e282e2cb20f9a.wav",
+      "duration": 4.35
+    },
+    {
+      "speaker": 4,
+      "transcript": "बाश की वै चे? बालो, सुन्छी!",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/c3388967aefd42ff9182fb8db2bedcc8.wav",
+      "duration": 4.11
+    },
+    {
+      "speaker": 5,
+      "transcript": "వాస కి హాచి వాలా �",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/98c9059febad4ef096dae7804c58f5ef.wav",
+      "duration": 3.72
+    },
+    {
+      "speaker": 6,
+      "transcript": "बाश की हो एच्छे? बालो सुन्ची?",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/cdb34c3757bb4509b12872f2e1d73bcf.wav",
+      "duration": 4.38
+    },
+    {
+      "speaker": 7,
+      "transcript": "বেববববববববববববব",
+      "character_similarity": 0.182,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/524ec8672ff942f38c9165a8f395ed2d.wav",
+      "duration": 3.52
+    },
+    {
+      "speaker": 8,
+      "transcript": "ববববববববববববববব�",
+      "character_similarity": 0.121,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/8e59c0337a594554bd793eeb0e36462c.wav",
+      "duration": 4.24
+    },
+    {
+      "speaker": 9,
+      "transcript": "ববববববববববববববব�",
+      "character_similarity": 0.121,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/2b899acebbd94661a09ac01ea8b7a8da.wav",
+      "duration": 4.4
+    },
+    {
+      "speaker": 10,
+      "transcript": "మాసి కికికికికి �",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/e032a2e49538402982dec93f2dfbdf15.wav",
+      "duration": 3.46
+    },
+    {
+      "speaker": 11,
+      "transcript": "ববববববববববববববব�",
+      "character_similarity": 0.121,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/34d92e7929f44e22b96482f9f38d9b96.wav",
+      "duration": 4.32
+    },
+    {
+      "speaker": 12,
+      "transcript": "बाश की हुए चे? बालो, सुन्ची?",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/f63a0ce0cf424d539135f5ca484e8ea7.wav",
+      "duration": 4.31
+    },
+    {
+      "speaker": 13,
+      "transcript": "బాస కి హాచి? బాల స",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/d6b57ae38ebb44a98a7a57be4dc76ebb.wav",
+      "duration": 3.93
+    },
+    {
+      "speaker": 14,
+      "transcript": "బాశ కి లో చాలి చా�",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/edff7f4b57d64a38a3790256fa053ea7.wav",
+      "duration": 4.03
+    },
+    {
+      "speaker": 15,
+      "transcript": "बाश की हुए छे? बालो, सुन्ची!",
+      "character_similarity": 0.0,
+      "wav": "/workspace/scratch/4d3beea8402b/qa/voice-choice-data/audio/e199cde87a464833852353cd186d9203.wav",
+      "duration": 4.43
+    }
+  ],
+  "best_similarity_speaker": 7,
+  "intelligibility_passed": false,
+  "selected_speaker": 0,
+  "note": "All transcripts failed the phrase. The largest character similarity is a repetition artifact and was not used to choose the default voice."
+}

@@ -1,0 +1,26 @@
+{
+  "platform": "linux",
+  "browser": "Headless Chromium",
+  "passed": true,
+  "checks": [
+    "Default orb and approximate native client viewport fit without scrolling",
+    "Jarvis preset stores actual profile, male voice and end-of-turn pause without save races",
+    "Device-check dialog and Stop cannot fabricate a passed test or save absent real jobs",
+    "Real preference persistence and push-to-talk selection",
+    "Text fallback executes real clock command and displays completion evidence without an LLM",
+    "Unavailable LLM gives visible error, no fabricated answer",
+    "Controlled mic transcript → real command/task → simulated WAV playback; no capture during output",
+    "Stop releases output and session",
+    "Muted text turn produces real reply with no playback",
+    "Microphone absence is visible and retry works (permission/device fixture)",
+    "Continuous and push-to-talk modes reach capture with correct end-of-turn settings",
+    "App command requires exact on-screen confirmation; Deny cancels it",
+    "Service failure is visible and text controls remain usable",
+    "Reload preserves settings but does not silently open the microphone",
+    "No uncaught JavaScript errors"
+  ],
+  "errors": [],
+  "scope": "Real HTTP/SQLite clock and approvals. Microphone, installed speech flags and waveform output are controlled fixtures. No real ASR/TTS/model/device acceptance.",
+  "native_windows_tested": false,
+  "physical_voice_devices_tested": false
+}

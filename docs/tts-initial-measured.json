@@ -1,0 +1,20 @@
+{
+  "platform": "linux",
+  "model": "rhasspy/piper-voices en_US-ljspeech-medium",
+  "piper_version": "1.7.0",
+  "text": "NEXUS is ready. Your tasks and memories stay on this computer.",
+  "seconds_including_load": 0.411,
+  "job": {
+    "id": "0301ab6459c34413a6feb5492cc2821a",
+    "lane": "speech-output",
+    "state": "FAILED",
+    "progress": "Synthesizing English speech locally with Piper",
+    "result": null,
+    "error": "Neural speech synthesis failed: Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/workspace/scratch/4d3beea8402b/qa/tts/piper/__main__.py\", line 13, in <module>\n    from pathvalidate import sanitize_filename\nModuleNotFoundError: No module named 'pathvalidate'",
+    "created_at": 1791211983.321465
+  },
+  "passed": false,
+  "windows_speaker_tested": false,
+  "scope": "Actual neural synthesis via authenticated job API, downloaded WAV and independent local speech recognition; no subjective naturalness score or Windows device test",
+  "review": "Build-only QA installation initially omitted an actual Piper dependency (pathvalidate). The application package declares Piper normally and pip installs its dependencies; this baseline is preserved."
+}

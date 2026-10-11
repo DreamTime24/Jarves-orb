@@ -1,0 +1,20 @@
+{
+  "version": "0.5.0",
+  "state": "Implemented; source/UI/recorded English pipeline passed, Bengali ASR quality failed; target Windows/device/full-day acceptance remains open",
+  "python_tests_passed": 97,
+  "orb_ui_checks_passed": 15,
+  "dashboard_ui_checks_passed": 11,
+  "portable_runtime_bundled": true,
+  "bundled_windows_wheels": 29,
+  "recorded_pipeline_all_passed": false,
+  "recorded_pipeline_passed_checks": 12,
+  "recorded_pipeline_total_checks": 15,
+  "english_recorded_voice_model_pipeline_passed": true,
+  "bengali_human_ASR_threshold_passed": false,
+  "windows_native_execution_tested": false,
+  "physical_microphone_speaker_tested": false,
+  "24_hour_passed": false,
+  "short_backend_reliability_seconds": 600.005,
+  "short_voice_model_reliability_seconds": 60.0,
+  "commercial_game_adapter": false
+}

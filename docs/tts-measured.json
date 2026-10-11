@@ -1,0 +1,30 @@
+{
+  "platform": "linux",
+  "model": "rhasspy/piper-voices en_US-ljspeech-medium",
+  "piper_version": "1.7.0",
+  "text": "NEXUS is ready. Your tasks and memories stay on this computer.",
+  "seconds_including_load": 1.418,
+  "job": {
+    "id": "75562906dce94d969f20085056f446cd",
+    "lane": "speech-output",
+    "state": "COMPLETED",
+    "progress": "Completed",
+    "result": {
+      "synthesized": true,
+      "audio": "e05cfaffe13e4579ad32f0a966b97f56.wav",
+      "duration_seconds": 4.1,
+      "sample_rate": 22050,
+      "local": true,
+      "engine": "Piper LJ Speech medium",
+      "audible_verified": false
+    },
+    "error": "",
+    "created_at": 1791212130.6738315
+  },
+  "passed": true,
+  "windows_speaker_tested": false,
+  "scope": "Actual neural synthesis via authenticated job API, downloaded WAV and independent local speech recognition; no subjective naturalness score or Windows device test",
+  "rms": 0.11379942297935486,
+  "sha256": "f43adc76fb24c1fff5c9996349b58a6766903f29c5ea5a7f529b2c8abf51f84a",
+  "independent_transcript": "Nexus is ready. Your tasks and memories stay on this computer."
+}

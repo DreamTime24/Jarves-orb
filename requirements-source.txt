@@ -1,0 +1,2 @@
+# Optional developer source install; do not use inside the portable runtime.
+-e .[voice,perception]

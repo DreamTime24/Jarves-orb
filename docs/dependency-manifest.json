@@ -1,0 +1,268 @@
+{
+  "python": "3.13.16",
+  "target": "CPython 3.13 Windows x64",
+  "packages": [
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "filename": "pyyaml-6.0.3-cp313-cp313-win_amd64.whl",
+      "sha256": "79005a0d97d5ddabfeeea4cf676af11e647e41d81c9a7722a193022accdb6b7c",
+      "bytes": 154090,
+      "license": "MIT",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "filename": "anyio-4.15.1-py3-none-any.whl",
+      "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "bytes": 132079,
+      "license": "MIT",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "av",
+      "version": "19.0.1",
+      "filename": "av-19.0.1-cp312-abi3-win_amd64.whl",
+      "sha256": "906fc3db09288319a75ea23ffefb59961c7dbe0d1c074601507a89de7d8593d8",
+      "bytes": 28149519,
+      "license": "BSD-3-Clause",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "filename": "certifi-2026.7.22-py3-none-any.whl",
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "bytes": 136983,
+      "license": "MPL-2.0",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "filename": "click-8.5.0-py3-none-any.whl",
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "bytes": 125251,
+      "license": "BSD-3-Clause",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "ctranslate2",
+      "version": "4.8.2",
+      "filename": "ctranslate2-4.8.2-cp313-cp313-win_amd64.whl",
+      "sha256": "399c20a7336b6358f69ce3c615e090eabc08f29735a079fd1ac1e464119e0861",
+      "bytes": 19222061,
+      "license": "MIT",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "faster-whisper",
+      "version": "1.2.1",
+      "filename": "faster_whisper-1.2.1-py3-none-any.whl",
+      "sha256": "79a66ad50688c0b794dd501dc340a736992a6342f7f95e5811be60b5224a26a7",
+      "bytes": 1118909,
+      "license": "MIT",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "filelock",
+      "version": "4.0.12",
+      "filename": "filelock-4.0.12-py3-none-any.whl",
+      "sha256": "5f17ee83ecee8a6f3e389c75822fb70a1c2f0506b99438a6dffa1d56793588c8",
+      "bytes": 111732,
+      "license": "MIT",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "filename": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "bytes": 26661,
+      "license": "Apache 2.0",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "filename": "fsspec-2026.9.0-py3-none-any.whl",
+      "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f",
+      "bytes": 221738,
+      "license": "BSD-3-Clause",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "filename": "h11-0.16.0-py3-none-any.whl",
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "bytes": 37515,
+      "license": "MIT",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.6.0",
+      "filename": "hf_xet-1.6.0-cp38-abi3-win_amd64.whl",
+      "sha256": "fb4fadde1b2b70bf4c0c14a6dccbe7194b1c28947fefd5bbe3fed9d940676c3b",
+      "bytes": 4033128,
+      "license": "Apache-2.0",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "filename": "httpcore-1.0.9-py3-none-any.whl",
+      "sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+      "bytes": 78784,
+      "license": "BSD-3-Clause",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "filename": "httpx-0.28.1-py3-none-any.whl",
+      "sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+      "bytes": 73517,
+      "license": "BSD-3-Clause",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "1.33.0",
+      "filename": "huggingface_hub-1.33.0-py3-none-any.whl",
+      "sha256": "04e434b06e100eddbce9a6e817d72693a7884b10a79bd67ab48080d5c07eb899",
+      "bytes": 846435,
+      "license": "Apache-2.0",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "filename": "idna-3.20-py3-none-any.whl",
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "bytes": 69583,
+      "license": "BSD-3-Clause",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "filename": "numpy-2.5.3-cp313-cp313-win_amd64.whl",
+      "sha256": "71cad2b2a7451ab79d8f5e71b453485b6775963d5cf794179144a7463fe6e8ec",
+      "bytes": 12560965,
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.30.0",
+      "filename": "onnxruntime-1.30.0-cp313-cp313-win_amd64.whl",
+      "sha256": "4b63041bd623a9a9ac5e353948436c6fa7f43edd12d6b4a4ebc340bca959ba93",
+      "bytes": 14311378,
+      "license": "MIT License",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "filename": "packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "bytes": 129956,
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "pathvalidate",
+      "version": "3.3.1",
+      "filename": "pathvalidate-3.3.1-py3-none-any.whl",
+      "sha256": "5263baab691f8e1af96092fa5137ee17df5bdfbd6cff1fcac4d6ef4bc2e1735f",
+      "bytes": 24305,
+      "license": "MIT License",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "filename": "pillow-12.3.0-cp313-cp313-win_amd64.whl",
+      "sha256": "1cca606cd25738df4ed873d5ad46bbdb3d83b5cbca291f6b4ff13a4df6b0bbe8",
+      "bytes": 7239691,
+      "license": "MIT-CMU",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "piper-tts",
+      "version": "1.7.0",
+      "filename": "piper_tts-1.7.0-cp39-abi3-win_amd64.whl",
+      "sha256": "a2af3dae98e1835a3b1da37e4aa290e6adf41165c7d768e1ce73d9246f867d2c",
+      "bytes": 34114093,
+      "license": "GPL-3.0-or-later",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "filename": "protobuf-7.36.2-cp310-abi3-win_amd64.whl",
+      "sha256": "a300819d441e078a5608c0d3c709796bb548136058fda017ae51d425b44fd353",
+      "bytes": 456514,
+      "license": "3-Clause BSD License",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "filename": "psutil-7.2.2-cp37-abi3-win_amd64.whl",
+      "sha256": "eb7e81434c8d223ec4a219b5fc1c47d0417b12be7ea866e24fb5ad6e84b3d988",
+      "bytes": 137737,
+      "license": "BSD-3-Clause",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "pytesseract",
+      "version": "0.3.13",
+      "filename": "pytesseract-0.3.13-py3-none-any.whl",
+      "sha256": "7a99c6c2ac598360693d83a416e36e0b33a67638bb9d77fdcac094a3589d4b34",
+      "bytes": 14705,
+      "license": "Apache License 2.0",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "socksio",
+      "version": "1.0.0",
+      "filename": "socksio-1.0.0-py3-none-any.whl",
+      "sha256": "95dc1f15f9b34e8d7b16f06d74b8ccf48f609af32ab33c608d08761c5dcbb1f3",
+      "bytes": 12763,
+      "license": "MIT",
+      "source": "PyPI wheel; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.2",
+      "filename": "tokenizers-0.23.2-cp310-abi3-win_amd64.whl",
+      "sha256": "2e96f5699d5249c9c64aa8412e044f727aae3a4098cf830f9901ec1afc361cde",
+      "bytes": 2863236,
+      "license": "See package notices",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "filename": "tqdm-4.70.1-py3-none-any.whl",
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73",
+      "bytes": 80199,
+      "license": "MPL-2.0 AND MIT",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "bytes": 45571,
+      "license": "PSF-2.0",
+      "source": "PyPI wheels; licenses retained in runtime/python/site-packages"
+    }
+  ],
+  "native_execution_verified": false
+}

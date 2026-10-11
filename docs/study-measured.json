@@ -1,0 +1,52 @@
+{
+  "platform": "linux",
+  "model": "Qwen/Qwen3-4B-GGUF Q4_K_M",
+  "weight_bytes": 2497280256,
+  "runtime": "llama.cpp CPU via local HTTP transport test harness",
+  "ollama_windows_tested": false,
+  "tests": [
+    {
+      "case": "bengali_study_final_context",
+      "workflow_completed": true,
+      "seconds": 43.967,
+      "answer": "সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য হলো:\n\n1. **সিরিজ বর্তনী**: এখানে সমস্ত উপাদানগুলো একই পথে যোগ করা হয়। একটি কারেন্ট সমস্ত উপাদানগুলোর মধ্যে প্রবাহিত হয়।  \n2. **সমান্তরাল বর্তনী**: এখানে উপাদানগুলো বিভিন্ন শাখাগুলোতে বিভিন্ন পথে যোগ করা হয়। প্রতিটি শাখায় ভোল্টেজ সমান হয়, কিন্তু কারেন্ট শাখাগুলোতে বিভিন্ন ভাবে বিভাজিত হয়।  \n\nউপরের দুইটি বাক্যটি সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য বাংলায় ঠিক দুইটি বাক্যে বুঝিয়ে দেয়।",
+      "error": "",
+      "retrieved_memory_count": 1,
+      "task": {
+        "id": "ce8549c280ac4cb09ac614883a8f6a77",
+        "title": "সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য বাংলায় ঠিক দুইটি বাক্যে বুঝিয়ে দাও।",
+        "goal": "সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য বাংলায় ঠিক দুইটি বাক্যে বুঝিয়ে দাও।",
+        "state": "COMPLETED",
+        "created_at": "2026-10-05T14:56:59.740141+00:00",
+        "updated_at": "2026-10-05T14:57:43.706361+00:00",
+        "due_at": null,
+        "result": "সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য হলো:\n\n1. **সিরিজ বর্তনী**: এখানে সমস্ত উপাদানগুলো একই পথে যোগ করা হয়। একটি কারেন্ট সমস্ত উপাদানগুলোর মধ্যে প্রবাহিত হয়।  \n2. **সমান্তরাল বর্তনী**: এখানে উপাদানগুলো বিভিন্ন শাখাগুলোতে বিভিন্ন পথে যোগ করা হয়। প্রতিটি শাখায় ভোল্টেজ সমান হয়, কিন্তু কারেন্ট শাখাগুলোতে বিভিন্ন ভাবে বিভাজিত হয়।  \n\nউপরের দুইটি বাক্যটি সিরিজ ও সমান্তরাল বর্তনীর পার্থক্য বাংলায় ঠিক দুইটি বাক্যে বুঝিয়ে দেয়।",
+        "error": "",
+        "priority": 2,
+        "plan_rounds": 0,
+        "mode": "answer",
+        "steps": []
+      },
+      "factual_review": {
+        "basic_circuit_facts": "Broadly correct single-path current vs parallel branch voltage/current description",
+        "two_sentence_requirement_passed": false,
+        "fluency": "Understandable but awkward wording and redundant claim of two sentences",
+        "full_study_case_passed": false
+      }
+    }
+  ],
+  "study_results_preserved_in": "model-context-failure-measured.json",
+  "model_runs": [
+    {
+      "id": 1,
+      "model": "qwen3-4b-test",
+      "elapsed_seconds": 43.96017538299975,
+      "success": 1,
+      "prompt_tokens": 480,
+      "output_tokens": 443,
+      "created_at": "2026-10-05T14:57:43.704682+00:00"
+    }
+  ],
+  "passed": false,
+  "review": "The conversation path generated an answer and retrieved one relevant study memory. It did not satisfy the requested two-sentence format; this is a partial result, not a full study-quality pass."
+}

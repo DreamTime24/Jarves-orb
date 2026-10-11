@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexus-personal-agent"
+version = "0.5.0"
+description = "Local-first personal agent with durable tasks and explicit approvals"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+desktop = ["pywebview>=5,<7", "psutil>=5.9,<8"]
+perception = ["Pillow>=10,<13", "pytesseract>=0.3,<1"]
+voice = ["faster-whisper>=1.2,<2", "huggingface-hub>=0.28,<2", "numpy>=1.26,<3", "piper-tts==1.7.0", "httpx[socks]>=0.28,<1"]
+
+[project.scripts]
+nexus = "nexus.__main__:main"
+
+[tool.setuptools.package-data]
+nexus = ["web/*", "web/fonts/*", "migrations/*.sql"]
+
+[tool.setuptools.packages.find]
+include = ["nexus", "nexus.*"]
+exclude = ["launcher*", "workspace*", "runtime*", "tests*", "scripts*"]

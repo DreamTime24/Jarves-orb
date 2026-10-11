@@ -1,0 +1,17 @@
+{
+  "method": "PE import-table inspection on Linux",
+  "missing_from_bundle": {
+    "msvcp140.dll": [
+      "site-packages/ctranslate2/ctranslate2.dll",
+      "site-packages/onnxruntime/capi/onnxruntime.dll",
+      "site-packages/ctranslate2/_ext.cp313-win_amd64.pyd",
+      "site-packages/onnxruntime/capi/onnxruntime_pybind11_state.pyd"
+    ],
+    "msvcp140_1.dll": [
+      "site-packages/onnxruntime/capi/onnxruntime.dll",
+      "site-packages/onnxruntime/capi/onnxruntime_pybind11_state.pyd"
+    ]
+  },
+  "native_execution_tested": false,
+  "repair": "Official signed Microsoft VC++ installer offered only when an actual Windows native import fails"
+}

@@ -1,0 +1,54 @@
+{
+  "platform": "linux",
+  "browser": "Headless Chromium",
+  "passed": true,
+  "checks": [
+    {
+      "check": "13-page navigation",
+      "passed": true
+    },
+    {
+      "check": "Setup paths/readiness and browser button wiring (open callback fixture)",
+      "passed": true
+    },
+    {
+      "check": "Setup 390px layout without overflow",
+      "passed": true
+    },
+    {
+      "check": "Memory save/search/forget controls",
+      "passed": true
+    },
+    {
+      "check": "Persisted appearance controls",
+      "passed": true
+    },
+    {
+      "check": "Exact environment approval and feedback persistence",
+      "passed": true
+    },
+    {
+      "check": "Created environment appears in Projects",
+      "passed": true
+    },
+    {
+      "check": "Real maze result rendered",
+      "passed": true
+    },
+    {
+      "check": "Offline provider error visible, no fabricated answer",
+      "passed": true
+    },
+    {
+      "check": "390px mobile viewport without horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "No JavaScript page errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "native_windows_tested": false,
+  "voice_devices_tested": false
+}

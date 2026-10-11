@@ -1,0 +1,57 @@
+{
+  "sdk": "8.0.425",
+  "runtime": "8.0.31",
+  "downloads": [
+    {
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.425/dotnet-sdk-8.0.425-linux-x64.tar.gz",
+      "sha512": "934b8060a7190e5909ad1fd0785db542f487b3bbf6cdd14826b02095fdd0d0394298b1634085eff302928fccc33f7c1a7253e9b87df555fc36fce819bcd2e798",
+      "sha512_verified": true,
+      "bytes": 216833108
+    },
+    {
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Runtime/8.0.31/dotnet-runtime-8.0.31-win-x64.zip",
+      "sha512": "9c55c58694676ee64b0eed2cd6d8cbf58b9aa8288420acc66841e15ca0099c75d4af0182d23a641c2342e5a151a325df4a12fa0bde2e47c0fb7e9a33e7b09896",
+      "sha512_verified": true,
+      "bytes": 33322727
+    }
+  ],
+  "windows_execution_tested": false,
+  "csharp_compilation_passed": true,
+  "linux_platform_guard_output": "NEXUS-Start requires 64-bit Windows on Intel/AMD. Source mode supports other systems.",
+  "windows_wheel_files_available": [
+    "anyio-4.15.1-py3-none-any.whl",
+    "av-19.0.1-cp312-abi3-win_amd64.whl",
+    "certifi-2026.7.22-py3-none-any.whl",
+    "click-8.5.0-py3-none-any.whl",
+    "ctranslate2-4.8.2-cp313-cp313-win_amd64.whl",
+    "faster_whisper-1.2.1-py3-none-any.whl",
+    "filelock-4.0.12-py3-none-any.whl",
+    "flatbuffers-25.12.19-py2.py3-none-any.whl",
+    "fsspec-2026.9.0-py3-none-any.whl",
+    "h11-0.16.0-py3-none-any.whl",
+    "hf_xet-1.6.0-cp38-abi3-win_amd64.whl",
+    "httpcore-1.0.9-py3-none-any.whl",
+    "httpx-0.28.1-py3-none-any.whl",
+    "huggingface_hub-1.33.0-py3-none-any.whl",
+    "idna-3.20-py3-none-any.whl",
+    "numpy-2.5.3-cp313-cp313-win_amd64.whl",
+    "onnxruntime-1.30.0-cp313-cp313-win_amd64.whl",
+    "packaging-26.3-py3-none-any.whl",
+    "pathvalidate-3.3.1-py3-none-any.whl",
+    "pillow-12.3.0-cp313-cp313-win_amd64.whl",
+    "piper_tts-1.7.0-cp39-abi3-win_amd64.whl",
+    "protobuf-7.36.2-cp310-abi3-win_amd64.whl",
+    "psutil-7.2.2-cp37-abi3-win_amd64.whl",
+    "pytesseract-0.3.13-py3-none-any.whl",
+    "pythonnet-3.2.0-cp311.cp312.cp313.cp314.cp315-none-any.whl",
+    "pywebview-3.4-py3-none-any.whl",
+    "pywebview-6.2.1-py3-none-any.whl",
+    "pyyaml-6.0.3-cp313-cp313-win_amd64.whl",
+    "tokenizers-0.23.2-cp310-abi3-win_amd64.whl",
+    "tqdm-4.70.1-py3-none-any.whl",
+    "typing_extensions-4.16.0-py3-none-any.whl"
+  ],
+  "dependency_check_scope": "Selected Windows x64 Python 3.13 wheels downloaded; not a full native installation or Windows execution test",
+  "launcher_source_sha256": "d72c93b28ca08aacc993abcc58f4d1e8ce57741c7f565e6dd3723c332c89af5b",
+  "launcher_binary_sha256": "108b2e253d7258d088fc7ba65ca0c0cb0a2192d012db2ac551748dd79499a809"
+}
